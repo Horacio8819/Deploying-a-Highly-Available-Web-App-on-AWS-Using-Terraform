@@ -14,6 +14,7 @@ This project provisions a highly available, auto-scaling Node.js application on 
 - Launch Template – Defines EC2 configuration
 - Security Groups – Controls traffic between components
 - Subnets – Two Availability Zones for high availability
+---
 
 ## 🔁 Request Flow
 User → ALB (port 80) → Target Group → EC2 Instances (port 3015)
@@ -118,4 +119,23 @@ http://<ALB_DNS>/
 http://<ALB_DNS>/health
 
                                                                   → OK
+---
+# 📈 Scaling Behavior
+### Automatically maintains at least 2 instances
+### Can scale up to 5 instances
+### ALB distributes traffic evenly across healthy instances
+---
 
+# 🔒 Security Design
+### EC2 instances are not publicly accessible
+### Only ALB can reach instances
+### Principle of least privilege applied via SG rules
+---
+
+# 🧠 Key Concepts Demonstrated
+### Infrastructure as Code (Terraform)
+### Auto Scaling Groups
+### Load Balancing (ALB)
+### Health Checks
+### Immutable infrastructure (Launch Templates)
+### Multi-AZ high availability
