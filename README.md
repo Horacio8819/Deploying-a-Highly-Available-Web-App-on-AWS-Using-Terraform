@@ -55,7 +55,7 @@ Fetches available AZs dynamically (not directly used, but useful for extension)
 
 - Installs Node.js (LTS)
 - Creates a simple Express server:
--- / → returns "Hello from ASG cluster!"
--- /health → returns 200 OK (used by ALB health checks)
+                  / → returns "Hello from ASG cluster!"
+                  /health → returns 200 OK (used by ALB health checks)
 - Configures a systemd service (nodeapp)
 - Ensures app runs automatically on boot
