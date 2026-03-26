@@ -9,7 +9,7 @@ This project provisions a highly available, auto-scaling Node.js application on 
 
 ### This infrastructure creates:
 - Application Load Balancer (ALB) – Public entry point (HTTP)
-- 
+- ALB listener on port 80
 - Target Group – Routes traffic to EC2 instances
 - Auto Scaling Group (ASG) – Maintains and scales instances
 - Launch Template – Defines EC2 configuration
